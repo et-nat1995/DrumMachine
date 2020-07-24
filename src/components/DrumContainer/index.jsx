@@ -21,9 +21,11 @@ function App() {
       <div id="display">
         Please Click or Press a Key!
       </div>
-      {
-        drumPads.map((pad, key) =><DrumPad key={key} {...pad} /> )
-      }
+      <div className="grid">
+        {
+          drumPads.map((pad, key) =><DrumPad key={key} {...pad} /> )
+        }
+      </div>
     </div>
   );
 }
