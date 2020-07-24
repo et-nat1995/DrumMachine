@@ -27,10 +27,12 @@ const DrumPads = props => {
 
 
     return(
-        <div className='drum-pad cell' id={props.audioId} onClick={handlePlay}>
+        <div className='drum-pad-outer cell' id={props.audioId} onClick={handlePlay}>
             <span className='sound'>{props.audioId}</span>
-            <span>{props.keyString}</span>
-            <audio className='clip' id={props.keyString} src={`${baseUrl}${props.url}`}/>
+            <div className='drum-pad' id={props.audioId}>
+                <span>{props.keyString}</span>
+                <audio className='clip' id={props.keyString} src={`${baseUrl}${props.url}`}/>
+            </div>
         </div>
     )
 }
